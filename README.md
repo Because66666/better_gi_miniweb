@@ -4,7 +4,7 @@
 当前bettergi的版本号：0.39.1<br>
 主要运用在BetterGI一条龙模块，下文有使用说明。<br>
 项目截图（测试图）<br>
-![屏幕截图 2025-01-21 120843](https://github.com/user-attachments/assets/962d3d06-c566-4bf2-ab2e-a9904d351d6e)<br>
+![Image](https://github.com/user-attachments/assets/e30151fa-f892-4d9e-b1a9-a26fec6c551b)<br>
 ### 使用方法（自行配置python环境）
 1. 克隆本项目到本地
 2. cd到项目文件夹下，使用命令提示符安装依赖库`pip install -r r.txt`
