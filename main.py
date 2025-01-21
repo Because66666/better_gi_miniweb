@@ -1,17 +1,13 @@
-from flask import Flask, jsonify, request, render_template,send_file
-import os
-import json
-from datetime import datetime
 import base64
-from PIL import Image
+from datetime import datetime
 from io import BytesIO
+from flask import Flask, jsonify, request, render_template, send_file
 from flask_sqlalchemy import SQLAlchemy
-from flask_compress import Compress
+
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///bettergi.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
-Compress(app)  # 启用Gzip压缩
 
 # webhook发送的json转为字典可能存在的键
 # 此外event字段一定存在，不再考虑
@@ -57,6 +53,7 @@ def page():
         min_id = 0
     return render_template('base.html', data=posts, last_id=min_id)
 
+
 @app.route('/image/<image_id>')
 def serve_image(image_id):
     # 从数据库中查询图片
@@ -71,13 +68,15 @@ def serve_image(image_id):
     # 返回图片数据作为响应
     return send_file(img_io, mimetype='image/png')
 
+
 @app.after_request
 def add_header(response):
     # 如果你只想对GET请求生效，可以加个判断
     if request.method == 'GET':
         response.cache_control.public = True
-        response.cache_control.max_age = 86400  # 缓存1天、
+        response.cache_control.max_age = 86400  # 缓存1天
     return response
+
 
 if __name__ == '__main__':
     app.run(debug=True, port=222)
