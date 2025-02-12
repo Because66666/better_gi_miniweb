@@ -20,20 +20,18 @@
     <div class="rounded-lg border bg-card text-card-foreground shadow-sm w-full max-w-md mx-auto mb-4"
          data-v0-t="card">
         <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-2xl font-semibold leading-none tracking-tight">
-            事件: {{ post.event }}</h3></div>
+            消息: {{ post.message }}</h3></div>
         <div class="p-6 pt-0"><p class="text-muted-foreground">
-            时间：{{ post.create_time }}
-            {% if post.action %}
+            时间：{{ post.timestamp }}
+
+            {% if post.event %}
             <br>
-            动作：{{ post.action }}
+            事件：{{ post.event }}
             {% endif %}
-            {% if post.conclusion %}
+
+            {% if post.result %}
             <br>
-            结果：{{ post.conclusion }}
-            {% endif %}
-            {% if post.task %}
-            <br>
-            任务：{{ post.task }}
+            结果：{{ post.result }}
             {% endif %}
         </p>
             {% if post.screenshot %}

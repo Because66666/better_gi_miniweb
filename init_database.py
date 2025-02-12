@@ -5,18 +5,17 @@ from datetime import datetime
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///bettergi.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
 db = SQLAlchemy(app)
 
 
 class Post_data(db.Model):
     id = db.Column(db.Integer, primary_key=True, unique=True, autoincrement=True)
     event = db.Column(db.Text, nullable=False)
-    action = db.Column(db.Text, nullable=True)
-    conclusion = db.Column(db.Text, nullable=True)
-    task = db.Column(db.Text, nullable=True)
+    result = db.Column(db.Text, nullable=True)
+    timestamp = db.Column(db.Text, nullable=True)
     screenshot = db.Column(db.Text, nullable=True, default=None)
     create_time = db.Column(db.DateTime, default=datetime.now)
+    message = db.Column(db.Text)
 
 
 def init_db():

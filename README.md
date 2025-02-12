@@ -8,8 +8,7 @@
 ### 使用方法（自行配置python环境）
 1. 克隆本项目到本地
 2. cd到项目文件夹下，使用命令提示符安装依赖库`pip install -r r.txt`
-3. 继续执行`python init_database`以初始化本地数据库。数据库文件在`instance/bettergi.db`。
-4. 点击运行`run run.py.bat`或者命令行`python run.py`启动服务器。出现`Running...`无报错则启动成功。在浏览器输入`http://127.0.0.1:222`即可查阅。首次启动无信息。
+3. 点击运行`run run.py.bat`启动服务器。出现`Running...`无报错则启动成功。在浏览器输入`http://127.0.0.1:222`即可查阅。首次启动无信息。
 5. 配置bettergi的webhook信息。左下角的`设置`点击进入，![Pasted image 20250121134331](https://github.com/user-attachments/assets/317470d0-94cb-4a93-af3b-c3896e59bfe3)
 然后webhook端点如图设置即可。当服务器启动后可以点击`发送`按钮检查是否可行。
 6. （可选）使用内网穿透，注意转发本地端口222。[这是找的B站视频，非本人录制](https://www.bilibili.com/video/BV1KF411m7Z7/?spm_id_from=333.337.search-card.all.click&vd_source=004597280d6ce19b6ca61309962cf7d9)。之后可以在非局域网内访问网页端口。这里可能存在国内网站备案问题，请注意遵守相关法律。
