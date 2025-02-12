@@ -23,7 +23,7 @@
 `main.py`：主要的服务器程序。<br>
 `run.py`：以WSGI服务器运行`main.py`<br>
 `test.py`：只接受来自BetterGI的POST数据，然后以json的格式保存在post_load/###.txt 文件中。格式为：<br>
-<img src="https://github.com/user-attachments/assets/13570b41-8da5-4c4e-8c4e-14355c5d75ac" alt="示例图片">
+<img src="https://github.com/user-attachments/assets/13570b41-8da5-4c4e-8c4e-14355c5d75ac" alt="示例图片" height="368" width="362">
 
 ---
 
