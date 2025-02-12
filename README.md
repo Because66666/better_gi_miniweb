@@ -5,21 +5,26 @@
 主要运用在BetterGI一条龙模块，下文有使用说明。<br>
 项目截图（测试图）<br>
 <img src="https://github.com/user-attachments/assets/ea9d14b3-61a8-4fdc-a9c8-edf111b63d83" alt="示例图片" width="394" height="501">
+
 ### 使用方法（自行配置python环境）
 1. 克隆本项目到本地
 2. 点击运行`run run.py.bat`启动服务器。出现`服务已启动...`无报错则启动成功。在浏览器输入`http://127.0.0.1:222`即可查阅。首次启动无信息。
 3. 配置bettergi的webhook信息。左下角的`设置`点击进入，然后webhook端点如图设置即可。当服务器启动后可以点击`发送`按钮检查是否可行。
 <img src="https://github.com/user-attachments/assets/317470d0-94cb-4a93-af3b-c3896e59bfe3" alt="示例图片">
-4. （可选）使用内网穿透，注意转发本地端口222。[这是找的B站视频，非本人录制](https://www.bilibili.com/video/BV1KF411m7Z7/?spm_id_from=333.337.search-card.all.click&vd_source=004597280d6ce19b6ca61309962cf7d9)。之后可以在非局域网内访问网页端口。这里可能存在国内网站备案问题，请注意遵守相关法律。
+
+4. （可选）使用内网穿透，注意转发本地端口222。 [这是找的B站视频，非本人录制](https://www.bilibili.com/video/BV1KF411m7Z7) 。之后可以在非局域网内访问网页端口。这里可能存在国内网站备案问题，请注意遵守相关法律。
+
 ### 继续开发
+
 你可以使用`test.py`来记录webhook发送的POST数据包（无网页前端）<br>
-[webhook文档](https://bettergi.com/dev/webhook.html)
+[webhook文档](https://bettergi.com/dev/webhook.html)<br>
 **文件说明**<br>
 `init_database.py`：初始化数据库，构建对应的数据模型，如果有test.py生成的txt文件则会导入到数据库中。<br>
 `main.py`：主要的服务器程序。<br>
 `run.py`：以WSGI服务器运行`main.py`<br>
 `test.py`：只接受来自BetterGI的POST数据，然后以json的格式保存在post_load/###.txt 文件中。格式为：<br>
 <img src="https://github.com/user-attachments/assets/13570b41-8da5-4c4e-8c4e-14355c5d75ac" alt="示例图片">
+
 ---
 
 ### 法律免责声明
