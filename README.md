@@ -1,7 +1,7 @@
 ### 项目介绍
 一个附属于[BetterGI](https://github.com/babalae/better-genshin-impact)的项目，通过bettergi的webhook构建。<br>
 当BetterGI使用webhook发送通知的时候，运行本项目可以接受其数据然后存储在本地的Sqlite数据库中，用户可以访问本地http://127.0.0.1:222 来查阅BetterGI发送的通知。使用python的flask构建服务器后端。<br>
-当前bettergi的版本号：0.39.1<br>
+当前bettergi的版本号：0.41.0<br>
 主要运用在BetterGI一条龙模块，下文有使用说明。<br>
 项目截图（测试图）<br>
 <img src="https://github.com/user-attachments/assets/ea9d14b3-61a8-4fdc-a9c8-edf111b63d83" alt="示例图片" width="394" height="501">
